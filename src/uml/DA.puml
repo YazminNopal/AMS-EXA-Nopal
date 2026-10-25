@@ -1,0 +1,83 @@
+
+@startuml
+
+<style>
+activityDiagram {
+  BackgroundColor #FFFDFB
+  BorderColor #B8C5D6
+  FontColor #46566A
+  FontName Arial
+
+  activity {
+    BackgroundColor #DDEBF7
+    BorderColor #91B9DF
+    FontColor #34495E
+    FontName Arial
+    FontSize 14
+  }
+
+  diamond {
+    BackgroundColor #E9DFF5
+    LineColor #B6A0D2
+    FontColor #5D4B75
+    FontName Arial
+    FontSize 14
+  }
+
+  arrow {
+    FontColor #7B8794
+    FontName Arial
+    FontSize 13
+  }
+}
+
+document {
+  BackgroundColor transparent
+}
+</style>
+
+start
+
+:Ingresar usuario y contraseña;
+:Validar credenciales de acceso;
+
+if (¿Datos de acceso correctos?) then (Sí)
+
+    :Consultar catálogo de productos;
+
+    if (¿Desea realizar compra?) then (Sí)
+
+        :Seleccionar producto;
+        :Especificar cantidad;
+        :Validar producto y cantidad;
+
+        if (¿Datos válidos y producto disponible?) then (Sí)
+
+            :Confirmar compra;
+            :Verificar usuario y producto en la base de datos;
+            :Registrar orden con fecha actual;
+            :Generar identificador único;
+            :Mostrar confirmación del pedido;
+
+        else (No)
+
+            :Mostrar mensaje de error;
+
+        endif
+
+    else (No)
+
+        :Consultar historial de pedidos;
+        :Mostrar pedidos del usuario;
+
+    endif
+
+else (No)
+
+    :Mostrar error de autenticación;
+
+endif
+
+stop
+@enduml
+

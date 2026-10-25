@@ -1,0 +1,54 @@
+@startgantt
+language es
+title Diagrama de Gantt - Plataforma Web Spring Boot (SCRUM)
+
+-- Sprint 1: Configuración y estructura inicial (4 días) --
+[Análisis de requerimientos y diseño de arquitectura] lasts 1 day
+[Análisis de requerimientos y diseño de arquitectura] is colored in Lavender/LightBlue
+
+[HU-01: Organizar estructura del proyecto] lasts 2 days and starts at [Análisis de requerimientos y diseño de arquitectura]'s end
+[HU-01: Organizar estructura del proyecto] is colored in Lavender/LightBlue
+
+[HU-02: Gestionar interfaces y manejo de errores] lasts 1 day and starts at [HU-01: Organizar estructura del proyecto]'s end
+[HU-02: Gestionar interfaces y manejo de errores] is colored in Lavender/LightBlue
+
+[Review Sprint 1] happens at [HU-02: Gestionar interfaces y manejo de errores]'s end
+
+-- Sprint 2: Desarrollo de API y conexión a BD (5 días) --
+[Configurar API REST] lasts 1 day and starts at [Review Sprint 1]'s end
+[Configurar API REST] is colored in GreenYellow/Green
+
+[HU-03: Implementar operaciones CRUD] lasts 2 days and starts at [Configurar API REST]'s end
+[HU-03: Implementar operaciones CRUD] is colored in GreenYellow/Green
+
+[HU-04: Conectar PostgreSQL] lasts 1 day and starts at [HU-03: Implementar operaciones CRUD]'s end
+[HU-04: Conectar PostgreSQL] is colored in GreenYellow/Green
+
+[HU-05: Intercambiar datos JSON y probar endpoints] lasts 1 day and starts at [HU-04: Conectar PostgreSQL]'s end
+[HU-05: Intercambiar datos JSON y probar endpoints] is colored in GreenYellow/Green
+
+[Review Sprint 2] happens at [HU-05: Intercambiar datos JSON y probar endpoints]'s end
+
+-- Sprint 3: Validación y preparación para producción (3 días) --
+[Configurar seguridad y JWT] lasts 1 day and starts at [Review Sprint 2]'s end
+[Configurar seguridad y JWT] is colored in LightPink/Salmon
+
+[HU-06: Proteger la API mediante JWT] lasts 1 day and starts at [Configurar seguridad y JWT]'s end
+[HU-06: Proteger la API mediante JWT] is colored in LightPink/Salmon
+
+[HU-07: Verificar funcionamiento con pruebas unitarias] lasts 1 day and starts at [HU-06: Proteger la API mediante JWT]'s end
+[HU-07: Verificar funcionamiento con pruebas unitarias] is colored in LightPink/Salmon
+
+[Review Sprint 3] happens at [HU-07: Verificar funcionamiento con pruebas unitarias]'s end
+
+-- Sprint 4: Optimización del procesamiento (2 días) --
+[HU-08: Mejorar procesamiento concurrente] lasts 1 day and starts at [Review Sprint 3]'s end
+[HU-08: Mejorar procesamiento concurrente] is colored in Thistle/Plum
+
+[HU-09: Optimizar rendimiento de la aplicación] lasts 1 day and starts at [HU-08: Mejorar procesamiento concurrente]'s end
+[HU-09: Optimizar rendimiento de la aplicación] is colored in Thistle/Plum
+
+[Review final y retrospectiva] happens at [HU-09: Optimizar rendimiento de la aplicación]'s end
+
+@endgantt
+

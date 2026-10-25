@@ -1,0 +1,42 @@
+@startuml
+
+class Usuario {
+    - id_usuario: int
+    - nombre: String
+    - email: String
+--
+    + iniciarSesion()
+    + consultarCatalogo()
+    + seleccionarProducto ()
+    + especificarCantidad ()
+    + confirmarCompra()
+    + consultarHistorial()
+}
+
+class Producto {
+    - id_producto: int
+    - nombre:String
+    - precio : double
+    - existencia : boolean
+--
+    + consultarProducto
+    + consultarPrecio
+    + consultarExistencia
+}
+
+class Orden {
+    - id_orden: int
+    - id_usuario: int
+    - id_producto: int
+    - cantidad: int
+    - fecha_orden: String
+--
+    + crearOrden()
+    + validarDatos()
+    + registrarOrden()
+}
+
+Usuario "1" -- "0..*" Orden : realiza
+Producto "1" -- "0..*" Orden : corresponde a
+
+@enduml

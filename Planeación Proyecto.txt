@@ -1,0 +1,54 @@
+1. [EPIC-1] Fundamentos de Spring Boot (The Base-core).
+
+Sprint 1. Configuración y estructura inicial. (4 días).
+
+[HU-01] Organizar la estructura del proyecto.
+[TASK-01] Analizar requerimientos y diseñar arquitectura.
+[TASK-02] Crear el proyecto y configurar dependencias.
+[TASK-03] Organizar paquetes y módulos.
+
+[HU-02] Gestionar interfaces y manejo de errores.
+[TASK-04] Definir interfaces y contratos de servicios.
+[TASK-05] Implementar manejo de excepciones.
+[BUG-01] Error de configuración o arranque, si se presenta.
+
+
+2. [EPIC-2] API Principal y Persistencia (The Core API).
+
+Sprint 2. Desarrollo de API y conexión a BD (5 días).
+[HU-03] Implementar operaciones CRUD. 
+[TASK-06] Implementar creación y consulta de registros.
+[TASK-08] Implementar actualización y eliminar.
+[HU-04] Conectar Postgre SQL.
+[TASK-09] Configurar conexión a la base de datos.
+[TASK-10] Crear entidades y repositorios.
+
+[HU-05] Intercambiar datos JSON y probar endpoints 
+[TASK-11] Validar solicitudes y respuestas JSON.
+[TASK-12] Probar endpoints con datos válidos e inválidos.
+[BUG-02] Error de persistencia o respuesta de API, si se presenta.
+
+
+3. [EPIC-3] Seguridad Pruebas y Despliegue (Production Readiness)
+
+Sprint 3. Validación y preparación para producción.
+
+
+[HU-06] Proteger la API mediante JWT.
+[TASK-13] Implementar validación de tokens JWT.
+[HU-07] Verificar el funcionamiento con pruebas unitarias.
+[TASK-14] Crear y ejecutar pruebas unitarias.
+[TASK-15] Documentar resultados y corregir fallos.
+[TASK-16] Crear Dockerfile y probar la imagen.
+[BUG-03] Fallo de autenticación o de pruebas, si se presenta.
+
+4. [EPIC-4] Concurrencia Avanzada (The Spring boot Superpower).
+
+Sprint 4. Optimización del procesamiento.
+
+[HU-08] Mejorar el procesamiento concurrente.
+[TASK-17] Implementar procesamiento concurrente en Java.
+[HU-09] Optimizar el rendimiento de la aplicación.
+[TASK-18] Medir y comparar el rendimiento.
+[TASK-19] Refactorizar y verificar el funcionamiento.
+[BUG-04] Resultados inconsistentes durante la concurrencia, si se detectan.

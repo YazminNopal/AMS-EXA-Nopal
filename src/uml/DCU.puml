@@ -1,0 +1,37 @@
+@startuml
+left to right direction
+
+actor "Usuario" as usuario
+
+rectangle "Sistema de Gestion de Pedidos" {
+
+    usecase "Iniciar sesion" as UC1
+    usecase "Validar credenciales" as UC2
+    usecase "Consultar catalogo" as UC3
+    usecase "Seleccionar producto disponible" as UC4
+    usecase "Especificar cantidad" as UC5
+    usecase "Confirmar compra" as UC6
+    usecase "Registrar orden" as UC7
+    usecase "Consultar historial de pedidos" as UC8
+
+    UC1 .> UC2 : <<include>>
+
+    UC6 .> UC4 : <<include>>
+    UC6 .> UC5 : <<include>>
+    UC6 .> UC7 : <<include>>
+
+  
+    note right of UC7
+      RNF-01:
+      Verificar la existencia del usuario
+      y del producto mediante la base
+      de datos y sus claves foraneas.
+    end note
+}
+
+usuario --> UC1
+usuario --> UC3
+usuario --> UC6
+usuario --> UC8
+
+@enduml

@@ -1,0 +1,33 @@
+@startuml
+
+entity "usuario" as usuario{
+   *id_usuario :INT <<PK>>
+--
+    *nombre: VARCHAR(100)
+    *email: VARCHAR(100)
+}
+
+entity "producto" as producto{
+   *id_producto :INT <<PK>>
+--
+    *nombre: VARCHAR(100)
+    *precio: INT 
+    *existencia: VARCHAR (100)
+}
+
+entity "orden" as orden{
+    *id_orden :INT <<PK>>
+--
+    *id_usuario :INT <<FK>>
+    *id_producto :INT <<FK>>
+    *cantidad: INT
+    *fecha_orden: VARCHAR(100)
+}
+
+'Relaciones 
+'Uno a muchos: Un usuario puede realizar cero o muchas órdenes
+usuario ||--|{orden : "Tiene (1:N)"
+'Uno a muchos: Un producto puede aparecer en cero o muchas órdenes.
+producto ||--|{orden : "Tiene (1:N)"
+
+@enduml
